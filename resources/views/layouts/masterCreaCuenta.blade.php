@@ -21,45 +21,16 @@
                     <a class="nav-link" href="{{ route('inicio.index') }}">Obras</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('artista.Login') }}">Iniciar sesión</a>
+                    <a class="nav-link" href="{{route('artista.Login')}}">Iniciar sesión</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('artista.CrearCuenta') }}">Crear cuenta</a>
+                    <a class="nav-link" href="{{route('artista.CrearCuenta')}}">Crear cuenta</a>
                 </li>
                 
             </ul>
         </div>
     </nav>
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="ruta_de_la_imagen.jpg" class="card-img-top" alt="Título de la fotografía">
-                    <div class="card-body">
-                        <h5 class="card-title">Título de la fotografía</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="ruta_de_la_imagen.jpg" class="card-img-top" alt="Título de la fotografía">
-                    <div class="card-body">
-                        <h5 class="card-title">Título de la fotografía</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="ruta_de_la_imagen.jpg" class="card-img-top" alt="Título de la fotografía">
-                    <div class="card-body">
-                        <h5 class="card-title">Título de la fotografía</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    @yield('nav-crearcuenta')
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

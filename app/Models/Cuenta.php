@@ -18,8 +18,9 @@ class Cuenta extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'user',
+        'nombre',
+        'apellido',
         'password',
     ];
 
@@ -42,4 +43,9 @@ class Cuenta extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    /*
+    public function serPasswordAtribute($value){
+        $this->atributes['password'] = bcrypt($value);
+    }
+    */
 }

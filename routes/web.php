@@ -21,8 +21,10 @@ Route::get('/',[InicioController::class,'index'])->name('inicio.index');
 
 /* crear cuenta */
 
-Route::get('/CrearCuenta', [CrearCuentaController::class, 'crear'])->name('artista.CrearCuenta');
+Route::get('/CrearCuenta', [CrearCuentaController::class, 'vistaCrear'])->name('artista.CrearCuenta');
+Route::post('/CrearCuenta', [CrearCuentaController::class, 'registrar'])->name('artista.registrar');
 
 /* login */
 
-Route::get('/Login', [LoginController::class, 'login'])->name('artista.Login');
+Route::get('/Login', [LoginController::class, 'vistaLogin'])->name('artista.login');
+Route::post('/Login', [LoginController::class, 'iniciar'])->name('artista.iniciar');

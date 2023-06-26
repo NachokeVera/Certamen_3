@@ -1,14 +1,18 @@
-@extends('layouts.masterCreaCuenta')
-@section('nav-crearcuenta')
+@extends('layouts.masterLoginCrear')
+@section('contenido')
 
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center align-items-center vh-100">
             <div class="card">
                 <div class="card-body">
                     <h2 class="text-center mb-4">Crear cuenta Artista</h2>
-                    <form action="{{-- {{ route('crear-cuenta') }} --}}" method="{{-- POST --}}">
+                    <form action="{{route('artista.registrar')}}" method="POST">
                         @csrf
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" class="form-control" id="user" name="user" required>
+                        </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -16,10 +20,6 @@
                         <div class="form-group">
                             <label for="apellido">Apellido</label>
                             <input type="text" class="form-control" id="apellido" name="apellido" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="usuario">Usuario</label>
-                            <input type="text" class="form-control" id="usuario" name="usuario" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>

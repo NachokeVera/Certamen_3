@@ -21,7 +21,7 @@
                     <a class="nav-link" href="{{ route('inicio.index') }}">Obras</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('artista.Login') }}">Iniciar sesión</a>
+                    <a class="nav-link" href="{{ route('artista.login') }}">Iniciar sesión</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('artista.CrearCuenta') }}">Crear cuenta</a>

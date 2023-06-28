@@ -26,4 +26,8 @@ class LoginRequest extends FormRequest
             'password'=> 'required'
         ];
     }
+    public function getCredentials(){
+
+        return this->only('user','password');
+    }
 }

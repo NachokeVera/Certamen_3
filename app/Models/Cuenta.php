@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -23,7 +23,7 @@ class Cuenta extends Authenticatable
         'apellido',
         'password',
     ];
-
+    protected $primaryKey = 'user';
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -41,11 +41,10 @@ class Cuenta extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
     ];
+    
     /*
-    public function serPasswordAtribute($value){
-        $this->atributes['password'] = bcrypt($value);
-    }
-    */
+    public function setPasswordAttribute(string $password){
+        $this->attributes['password'] = bcrypt($password);
+    }*/
 }

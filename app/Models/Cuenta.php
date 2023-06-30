@@ -18,11 +18,13 @@ class Cuenta extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'user',
         'nombre',
         'apellido',
         'password',
     ];
     protected $primaryKey = 'user';
+    public $incrementing = false;
     /**
      * The attributes that should be hidden for serialization.
      *

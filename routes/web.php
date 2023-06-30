@@ -5,6 +5,7 @@ use App\Http\Controllers\InicioController;
 use App\Http\Controllers\CrearCuentaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ImagenController;
+use App\Http\Controllers\ArtistaController;
 use App\Http\Controllers\AdministradorCuentasController;
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,8 @@ Route::get('/Logout', [LoginController::class, 'logout'])->name('artista.logout'
 /* artista */
 Route::get('/subir-fotografia', [ImagenController::class,'foto'])->name('artista.subir_foto');
 Route::post('/subir-fotografia', [ImagenController::class,'guardar'])->name('artista.guardar_foto');
+
+Route::get('/mis-fotos', [ArtistaController::class,'vistaMisFotos'])->name('artista.mis_foto');
 
 /* administrador */
 Route::get('/AdministradorCuentas', [AdministradorCuentasController::class, 'cuentas'])->name('administrador.AdministradorCuentas');

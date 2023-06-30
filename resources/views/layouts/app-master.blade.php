@@ -25,7 +25,9 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{route('artista.subir_foto')}}">Subir Imagen</a></li>
+                    <li><a class="dropdown-item" href="{{route('artista.mis_foto')}}">Mis imagenes</a></li>
                     <li><a class="dropdown-item" href="#">Imagenes Baneadas</a></li>
+                    
                   </ul>
                 </li>
                 <li class="nav-item">

@@ -24,9 +24,10 @@ class CrearCuentaController extends Controller
         $cuenta ->apellido = $request->apellido;
         //$cuenta ->password = $request->password;
         $cuenta ->password = Hash::make($request->password);
-        $cuenta->save();
         
         Auth::login($cuenta);
+        $cuenta->save();
+        
 
         return redirect()->route('inicio.index'); 
     }

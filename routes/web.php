@@ -36,7 +36,11 @@ Route::get('/Logout', [LoginController::class, 'logout'])->name('artista.logout'
 Route::get('/subir-fotografia', [ImagenController::class,'foto'])->name('artista.subir_foto');
 Route::post('/subir-fotografia', [ImagenController::class,'guardar'])->name('artista.guardar_foto');
 
-Route::get('/mis-fotos', [ArtistaController::class,'vistaMisFotos'])->name('artista.mis_foto');
 
+Route::get('/mis-fotos', [ArtistaController::class,'vistaMisFotos'])->name('artista.mis_foto');
+Route::get('/mis-fotos/{id}/editar', [ArtistaController::class,'editar'])->name('artista.editar');
+Route::put('/mis-fotos/{id}', [ArtistaController::class, 'subirEdit'])->name('artista.subirEdit');
+Route::delete('/mis-fotos/{id}', [ArtistaController::class, 'eliminar'])->name('artista.eliminar');
 /* administrador */
 Route::get('/AdministradorCuentas', [AdministradorCuentasController::class, 'cuentas'])->name('administrador.AdministradorCuentas');
+Route::delete('/cuenta/{cuenta}',[AdministradorCuentasController::class,'destroy'])->name('cuenta.destroy');

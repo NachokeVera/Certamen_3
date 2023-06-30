@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Cuenta;
 class AdministradorCuentasController extends Controller
 {
     public function cuentas(){
-        return view('administrador.AdministradorCuentas');
+        $cuenta = Cuenta::all();
+        return view('administrador.AdministradorCuentas', compact('cuenta'));
+
+    }
+    public function destroy(Cuenta $cuenta){
+
+        $cuenta->delete();
+        return redirect()->route('administrador.AdministradorCuentas');
     }
 }

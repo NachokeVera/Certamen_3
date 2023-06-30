@@ -18,7 +18,6 @@ class Cuenta extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'user',
         'nombre',
         'apellido',
         'password',

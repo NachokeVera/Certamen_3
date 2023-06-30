@@ -1,5 +1,5 @@
-@extends('layouts.masterAdministrador')
-@section('nav-administrador')
+@extends('layouts.app-master')
+@section('contenido')
 <div class="container mt-4">
     <div class="row">
         <div class="col">
@@ -21,7 +21,7 @@
                             <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
                         </td>
                     </tr>
-                    <
+                    
                 </tbody>
             </table>
         </div>

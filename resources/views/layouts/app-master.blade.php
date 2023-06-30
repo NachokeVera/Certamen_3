@@ -24,7 +24,7 @@
                   
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Subir Imagen</a></li>
+                    <li><a class="dropdown-item" href="{{route('artista.subir_foto')}}">Subir Imagen</a></li>
                     <li><a class="dropdown-item" href="#">Imagenes Baneadas</a></li>
                   </ul>
                 </li>
@@ -38,6 +38,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('artista.crearCuenta')}}">Crear cuenta</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('administrador.AdministradorCuentas')}}">Administrador</a>
                 </li>
               @endguest
               

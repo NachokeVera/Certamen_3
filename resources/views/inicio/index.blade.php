@@ -2,30 +2,23 @@
 @section('contenido')
     <div class="container mt-4">
         <div class="row">
+            @foreach ($imagenes as $imagen)
+            
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="ruta_de_la_imagen.jpg" class="card-img-top" alt="Título de la fotografía">
+                    <img src="{{asset($imagen->archivo)}}" class="card-img-top" alt="Título de la fotografía">
                     <div class="card-body">
-                        <h5 class="card-title">Título de la fotografía</h5>
+                        <h5 class="card-title">Titulo:</h5>
+                        <h5 class="card-title">{{$imagen->titulo}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Autor:</h6>
+                        <h6 class="card-title">{{$imagen->cuenta_user}}</h6>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="ruta_de_la_imagen.jpg" class="card-img-top" alt="Título de la fotografía">
-                    <div class="card-body">
-                        <h5 class="card-title">Título de la fotografía</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="ruta_de_la_imagen.jpg" class="card-img-top" alt="Título de la fotografía">
-                    <div class="card-body">
-                        <h5 class="card-title">Título de la fotografía</h5>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
         </div>
     </div>
 @endsection

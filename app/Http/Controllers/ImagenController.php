@@ -24,14 +24,14 @@ class ImagenController extends Controller
         
         //$cuentaUser = $user->user;
         if (auth()->check()){
-            $user = auth()->user();
-            $cuentaUser = $user->user;
-            return dd($cuentaUser);
+            $user = Auth::user();
+
+            //$cuentaUser = $user->userId;
             Imagen::create([
                 'titulo' => $request->titulo,
                 'archivo' => $url,
                 'motivo_ban' => "",
-                'cuenta_user'=> $cuentaUser
+                'cuenta_user'=> $user->apellido
             ]);
             return redirect()->route('inicio.index');
         } else{
